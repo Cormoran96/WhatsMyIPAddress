@@ -47,7 +47,7 @@ $noeud = $xml->as; //city longitude
 	<h2 class="post-title">Voici votre adresse IP publique : <?php //echo $ipaddress; ?></h2>
 	<h2 class="post-title">Voici votre nom d'hôte : <?php echo $host; ?></h2>
 	Cette adresse a été localisée dans la ville de <b><?php echo $city ?></b> (Région : <?php echo $region ?> / Pays : <?php echo $countryname ?>)
-	<br/>(Localisation effectuée en fonction de votre FAI (<b><?php echo $isp; ?></b>) et du noeud réseau auquel vous êtes rattaché (<b><?php echo $noeud; ?></b>))
+	<br/>(Localisation effectuée en fonction de votre FAI (<b><?php echo $isp; ?></b>) et du noeud réseau auquel vous êtes rattaché (<b><?php echo substr($noeud,0,7) ?></b>))
 	<p>
 		<center>
 		<iframe width="900" height="550"frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCRTD-ARSWquI_i1P0AlZrRPxnzmtIntd4&q=<?php echo $lattitude?>,<?php echo $longitude?>&zoom=12" allowfullscreen>
