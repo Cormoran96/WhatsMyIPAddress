@@ -1,0 +1,154 @@
+html,
+body,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+    /* Add some basic styling */
+    color: #0099ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    /* Add a hover effect */
+    color: #ffffff;
+    background-color: #0099ff;
+}
+
+a:active {
+    /* Add an active state effect */
+    transform: translateY(2px);
+}
+
+
+#mapid {
+    width: 100%;
+    height: 400px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+/* Responsive menu styles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .menu-button {
+        display: block;
+        cursor: pointer;
+    }
+
+    header .menu-button:before {
+        content: "";
+        background: #fff;
+        display: block;
+        height: 3px;
+        width: 26px;
+        margin: 5px 0;
+        border-radius: 2px;
+    }
+
+    header .menu-button.open:before {
+        background: #ccc;
+    }
+
+    header .menu-button.open:after {
+        background: #ccc;
+    }
+
+    header .menu-button:after {
+        content: "";
+        background: #fff;
+        display: block;
+        height: 3px;
+        width: 26px;
+        margin: 5px 0;
+        border-radius: 2px;
+    }
+
+    header nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #222;
+        z-index: 1;
+    }
+
+    header nav.open a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+footer {
+    /* Add some padding and a background color */
+    padding: 1em;
+    background-color: #223;
+
+    /* Style the links */
+    a {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            color: hotpink;
+        }
+    }
+
+    /* Make the footer full width on small screens */
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
